@@ -109,12 +109,14 @@ header > .container > nav > a {
     text-align: center;
     margin-top: 80px;
 }
+/*必须加display：flex 设置横轴方向的居中方式*/
+.stats > div {
+    display: flex;
+    justify-content: center;
+}
 /*设置dl横向显示*/
-.stats > dl {
-    line-height: 100px;
-    float: left;
-    margin-left: 80px;
-    text-align: center;
+.stats > div > dl {
+    padding: 30px;
 }
 /*上边距、字母之间间距、字体大小、颜色*/
 .stats > h1 {
@@ -126,23 +128,24 @@ header > .container > nav > a {
 .stats > p {
     margin-top: 50px;
 }
-.stats > dl > img {
+.stats > div > dl > img {
     margin-top: 60px;
 }
 /*上边距、字母之间间距、字体大小、颜色*/
-.stats > dl > dd {
+.stats > div > dl > dd {
     color: #f46208;
     margin-top: 20px;
     letter-spacing: 10px;
 }
 /*设置上边距 */
-.stats > dl > dt {
+.stats > div > dl > dt {
     padding-top: 20px;
 }
+/*team*/
 .team {
     /*设置居中、上边距、背景色、背景色高度*/
     text-align: center;
-    margin-top: 280px;
+    margin-top: 350px;
     background-color:#000;
     height: 600px;
 }
@@ -160,18 +163,25 @@ header > .container > nav > a {
     margin-top: 150px;
     margin-bottom: 30px;
 }
+/*必须加display：flex 设置横轴方向的居中方式*/
+.team > div {
+    display: flex;
+    justify-content: center;
+}
 /*设置整个dl左浮动实现横排效果*/
-.team > dl {
+.team > div > dl {
     float: left;
-    text-align: center;   
+    text-align: center;
+    margin-left: 20px;   
 }
 /*设置字体颜色为白色*/
-.team > dl > dt {
+.team > div > dl > dt {
     color: #ffffff;
 }
-.team > dl > dd {
+.team > div > dl > dd {
     color: #ffffff;
 }
+/*contactUs*/
 .contactUs  {
     text-align: center;
 }
