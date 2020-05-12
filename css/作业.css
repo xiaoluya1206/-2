@@ -1,0 +1,226 @@
+* {
+    /*字体设置（宋体）字体大小 外边距 内边距 边框*/ 
+    font-family: Microsoft YaHei UI;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+header{
+    /*设置背景色*/
+    height: 75px;
+    background: black;
+}
+/*设置容器（container）的高和外边距*/
+header > .container {
+    width: 100%;
+    margin: 0 auto;
+}
+header > .container > a {
+    /*(block)显示为块级元素，此元素前后会带有换行符(规定元素生成框的类型)*/
+    display: block;
+    float: left;
+    margin: 20px;
+}
+/*设置nav的浮动属性和右边距*/
+header > .container > nav {
+    float: right;
+    margin-right: 50px;
+}
+/*鼠标移至上面字体会变色*/
+header > .container > nav > a:hover{color:blue;}
+
+header > .container > nav > a {
+    margin: 10px;
+    line-height: 65px;
+    color: #fff;
+    text-align: center;
+    /*取消下划线*/
+    text-decoration: none;
+}
+/*设置banner图片贯穿整个网页*/
+.banner > img {
+    width: 100%;
+    height: 500px;
+    margin-top: 0;
+}
+/*设置绝对定位将文字置于图片上方*/
+.banner > dl > p {
+    position: absolute;
+    font-size: 40px;
+    top: 250px;
+    margin-left: 580px;
+    color: #fff;
+}
+.banner > dl > dt {
+    position: absolute;
+    top: 300px;
+    margin-left: 550px;
+    color: #fff;
+}
+/*设置整个portfolio水平居中*/
+.portfolio {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 80px;
+}
+.portfolio > h1 {
+    color: #f46208;
+    /*单个字母的间距*/
+    letter-spacing: 10px;
+    font-size: 48px;
+}
+.portfolio > p {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/*删掉下划线 设置字体颜色边距等*/
+.portfolio > nav > a {
+    text-decoration: none;
+    color: #f46208;
+    margin: 10px;
+}
+/*设置边框*/
+.portfolio > nav > a.ALL {
+    /*边框样式 固体*/
+    border:1px solid;
+}
+.portfolio > nav > a.WEB {
+    border:1px solid;
+}
+.portfolio > nav > a.SOFTWARE {
+    border:1px solid;
+}
+.portfolio > nav > a.WORKS {
+    border:1px solid;
+}
+.portfolio > nav > a.BRANDS {
+    border:1px solid;
+}
+/*设置图片贯穿整个网页和间距*/
+.portfolio > img {
+    width: 100%;
+    margin-top: 30px;
+}
+/*stats*/
+.stats {
+    /*设置水平居中 上边距*/
+    height: 100px;
+    text-align: center;
+    margin-top: 80px;
+}
+/*设置dl横向显示*/
+.stats > dl {
+    line-height: 100px;
+    float: left;
+    margin-left: 80px;
+    text-align: center;
+}
+/*上边距、字母之间间距、字体大小、颜色*/
+.stats > h1 {
+    margin-top: 20px;
+    letter-spacing: 10px;
+    font-size: 48px;
+    color: #f46208;
+}
+.stats > p {
+    margin-top: 50px;
+}
+.stats > dl > img {
+    margin-top: 60px;
+}
+/*上边距、字母之间间距、字体大小、颜色*/
+.stats > dl > dd {
+    color: #f46208;
+    margin-top: 20px;
+    letter-spacing: 10px;
+}
+/*设置上边距 */
+.stats > dl > dt {
+    padding-top: 20px;
+}
+.team {
+    /*设置居中、上边距、背景色、背景色高度*/
+    text-align: center;
+    margin-top: 280px;
+    background-color:#000;
+    height: 600px;
+}
+.team > h1 {
+    /*设置h1相对位置调整间距、颜色、字母间距、字体带下*/
+    position: relative;
+    top: 110px;
+    color: #f46208;
+    letter-spacing: 10px;
+    font-size: 48px;
+}
+/*设置颜色、上下边距*/
+.team > p {
+    color: #ffffff;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+/*设置整个dl左浮动实现横排效果*/
+.team > dl {
+    float: left;
+    text-align: center;   
+}
+/*设置字体颜色为白色*/
+.team > dl > dt {
+    color: #ffffff;
+}
+.team > dl > dd {
+    color: #ffffff;
+}
+.contactUs  {
+    text-align: center;
+}
+/*设置标题的颜色、字体大小、字母间距 上边距*/
+.contactUs > h1 {
+    color: #f46208;
+    font-size: 48px;
+    letter-spacing: 10px;
+    margin-top: 80px;
+}
+.contactUs > p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/*设置input的边框属性*/
+input[type="name"] {
+    border:1px solid;
+    color:  gray;
+}
+input[type="Email"] {
+    border:1px solid;
+    color:  gray;
+    margin-left: 20px;
+}
+input[type="Message"] {
+    margin-top: 20px;
+    border:1px solid;
+    color:  gray;
+}
+/*设置提交按钮的上边距、字体颜色、背景颜色及高*/
+input[type="submit"] {
+    margin-top: 20px;
+    color: #ffffff;
+    background: #f46208;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 150px;
+}
+/*设置页脚背景色 p标签水平垂直居中及字体颜色*/
+footer {
+    height: 100px;
+    background: #000;
+}
+footer {
+    color: #ffffff;
+    text-align: center;
+}
+footer > p {
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+}

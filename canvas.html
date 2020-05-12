@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>canvas</title>
+<style>
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+canvas {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: block;
+    margin: auto;
+    background: #abcdef;
+}
+</style>
+<!--此处插入js-->
+<script type="text/javascript">
+//加载完html文档立刻执行下方指令
+window.onload = function() {
+    //获取id这个元素（canvas）
+    var canvas = document.getElementById("canvas");
+    //获取上下文 在画布中进行一个绘图环境 下方为对绘图环境的操作
+    var context = canvas.getContext('2d');
+
+    //移动画笔在某个点开始
+    context.moveTo(100,100);
+    //到某个点结束
+    context.lineTo(200,200);
+    //设置路径的颜色
+    context.strokeStyle="red";
+    //绘制出通过moveTo（）与lineTo（）定制的路径 默认颜色黑色
+    context.stroke();
+
+}
+</script>
+</head>
+<body>
+    <!--给id的好处是在js里面好获取-->
+    <canvas id="canvas" width="1024px" height="768px">提示语 您的浏览器承载不了canvas这个东西 建议换个浏览器</canvas>
+</body>
+</html>

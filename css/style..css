@@ -1,0 +1,81 @@
+/* All Tag */
+* {
+    font-family: Arial;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+ul{
+   list-style: none; 
+}
+/* main */
+.main {
+    width: 1500px;
+    margin: auto;
+}
+.main h1 {
+    font-size: 40px;
+    font-weight: lighter;
+}
+.main samp {
+    font-size: 40px;
+    color: #7c7c7c;
+}
+.main > aside {
+    width: 500px;
+    float: left;
+}
+.main > aside > dl {
+    position: relative;
+    display: block;
+    height: 150px;
+}
+.main > aside > dl > dd:first-of-type {
+    position: absolute;
+    top: 10px;
+}
+.main > aside > dl > dt {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+.main > aside > dl > dd:first-of-type {
+    position: absolute;
+    margin-top: auto;
+    float: left;
+}
+.main > aside > dl > {
+    position: relative;
+}
+.main > aside > dl > p {
+    position: absolute;
+    float: left;
+    top: 13px;
+    left: 13px;
+    font-size: 40px;
+    color: #fff;
+}
+.main > aside > dl > dd:last-of-type {
+    margin-left: 60px;
+    font-size: 20px;
+}
+.main > article {
+    width: 800px;
+    float: right;
+}
+.main > article > p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.main > article > img {
+    width: 800px;
+    height: 330px;
+    margin-top: 10px;
+}
