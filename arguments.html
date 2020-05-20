@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments</title>
+</head>
+<body>
+    <script>
+        function inner(){
+            console.log(arguments.length); //打印参数的个数
+            console.log(arguments [0] ); //中括号内为索引是从0开始的正整数 例第一个参数为0 第二个为1
+        }
+        inner(10,2);
+
+        //求任意组的平均值
+        function x(){
+            var ss=0,len=arguments.length,i; //ss为总和 len为参数的个数 i是第几个参数
+            for(i=0;i<len;i++){  //i的初始值为0 也就是当i为0 则返回第一个参数
+                ss+=arguments[i]; 
+                //ss=0  +i=10  =ss=10 
+                // ss=0+10  +i=20  =ss=25=30
+                // ss=0+10+20  +i=30  =ss=60
+            }
+            return x=ss/len; //接收返回的值
+        }
+        x(10,20,30,40,50,1)
+        console.log(x)
+
+
+        //求平均值 并且值为整数
+        function z(){
+            var zz=0,le=arguments.length,zzz; 
+            for(zzz=0;zzz<le;zzz++){
+                zz+=arguments[zzz];
+            }
+            return z=zz/le;
+        }
+        z(25,23,24,66,21);
+        document.write(z);
+    </script>
+</body>
+</html>
