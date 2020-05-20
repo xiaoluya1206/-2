@@ -7,34 +7,58 @@
 </head>
 <body>
     <script>
-    //     //while 初始值需要写在上面 判断条件 在执行代码
-       var i=1;
-       while(i<=100){
-           document.write(i+"<br />")
-           i++;
-       } 
+    // //     //while 初始值需要写在上面 判断条件 在执行代码
+    //    var i=1;
+    //    while(i<=100){
+    //        document.write(i+"<br />")
+    //        i++;
+    //    } 
 
-       //do while
-       //1=10之间的偶数 取余数可实现偶数 先执行代码 在判断条件
-       var j=1;
-       do{
-           if(j%2==0){
-               console.log(j);
-           }
-           j++; //执行++不会死循环
-       }while(j<=10);
+    //    //do while
+    //    //1=10之间的偶数 取余数可实现偶数 先执行代码 在判断条件
+    //    var j=1;
+    //    do{
+    //        if(j%2==0){
+    //            console.log(j);
+    //        }
+    //        j++; //执行++不会死循环
+    //    }while(j<=10);
 
-       //1+2+3+...+100=？
-    //    sum=0+1=1
-    //    sum=0+1+2
-    //    sum=0+1+2+3
-       var sum=0;//最后放的是和
-       var n=1;
-       while(n<=100){
-           sum+=n;  //sum=sum+n
-           n++; //重点 必须要++ 不然会死循环 只等于1
-       }
-       console.log(sum);
-       </script>
+    //    //1+2+3+...+100=？
+    // //    sum=0+1=1
+    // //    sum=0+1+2
+    // //    sum=0+1+2+3
+    //    var sum=0;//最后放的是和
+    //    var n=1;
+    //    while(n<=100){
+    //        sum+=n;  //sum=sum+n
+    //        n++; //重点 必须要++ 不然会死循环 只等于1
+    //    }
+    //    console.log(sum);
+
+//猜10以内的数字 默认答案5
+    var o=prompt("请输入您猜的数字");
+    while(o){
+        if(o>10){
+            alert("答案是10以内的数字哦");
+            var o=prompt("请再猜猜");
+        }else{
+            if(o<5){
+                alert("猜小了");
+                var o=prompt("再猜猜");
+            }else{
+                if(o>5){
+                    alert("猜大了")
+                    var o=prompt("再猜猜哦");
+                }else{
+                    if(o==5){
+                        alert("猜对了");
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    </script>
 </body>
 </html>
