@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找数组中某值在数组的位置</title>
+</head>
+<body>
+    <script>
+        //indexOf 从数组的开头0开始查找 找不到则返回-1 
+        //语法：数组名.indexOf（查找的值，从哪个位置开始）
+
+        //lastIndexOf 从数组的末尾开始查找
+        //语法：数组名.lastIndexOf（查找的值，从哪个位置开始）
+
+        //浏览器兼容 可参考以下方法查找
+        var nums=[1,5,8,9,7,5,1,4,3];
+        function ArrayIndexOf(arr,value){  //arr为数组 value某个值
+            for(var i=0;i<nums.length;i++){
+                if(arr[i]===value){  //当数组中的某个值===value 则返回值得位置
+                    return i;
+                }
+            }
+            return -1;
+        } 
+        var i1=ArrayIndexOf(nums,3);  //对应 （arr，value）
+        console.log(i1);
+    </script>
+</body>
+</html>
