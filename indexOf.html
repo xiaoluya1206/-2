@@ -7,24 +7,35 @@
 </head>
 <body>
     <script>
-        //indexOf 从数组的开头0开始查找 找不到则返回-1 
-        //语法：数组名.indexOf（查找的值，从哪个位置开始）
+        // //indexOf 从数组的开头0开始查找 找不到则返回-1 
+        // //语法：数组名.indexOf（查找的值，从哪个位置开始）
 
-        //lastIndexOf 从数组的末尾开始查找
-        //语法：数组名.lastIndexOf（查找的值，从哪个位置开始）
+        // //lastIndexOf 从数组的末尾开始查找
+        // //语法：数组名.lastIndexOf（查找的值，从哪个位置开始）
 
-        //浏览器兼容 可参考以下方法查找
-        var nums=[1,5,8,9,7,5,1,4,3];
-        function ArrayIndexOf(arr,value){  //arr为数组 value某个值
-            for(var i=0;i<nums.length;i++){
-                if(arr[i]===value){  //当数组中的某个值===value 则返回值得位置
-                    return i;
-                }
-            }
-            return -1;
-        } 
-        var i1=ArrayIndexOf(nums,3);  //对应 （arr，value）
-        console.log(i1);
+        // //浏览器兼容 可参考以下方法查找
+        // var nums=[1,5,8,9,7,5,1,4,3];
+        // function ArrayIndexOf(arr,value){  //arr为数组 value某个值
+        //     for(var i=0;i<nums.length;i++){
+        //         if(arr[i]===value){  //当数组中的某个值===value 则返回值得位置
+        //             return i;
+        //         }
+        //     }
+        //     return -1;
+        // } 
+        // var i1=ArrayIndexOf(nums,3);  //对应 （arr，value）
+        // console.log(i1);
+
+
+        //获取扩展名的小例子
+        var url="http://baidu.com//index.txt";
+        function getFileFormat(url){
+            //获取.在url中的位置
+            var pos=url.lastIndexOf(".");
+            return url.slice(pos);
+        }  //意为获取文件格式 接收地址url
+        var name1=getFileFormat(url);
+        console.log(name1);
     </script>
 </body>
 </html>
