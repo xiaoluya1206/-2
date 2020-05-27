@@ -29,12 +29,12 @@
 
         //获取扩展名的小例子
         var url="http://baidu.com//index.txt";
-        function getFileFormat(url){
+        function getFileFormat(url){ //意为获取文件格式 接收地址url
             //获取.在url中的位置
             var pos=url.lastIndexOf(".");
-            return url.slice(pos);
-        }  //意为获取文件格式 接收地址url
-        var name1=getFileFormat(url);
+            return url.slice(pos); //如不想要.可pos+1
+        }  
+        var name1=getFileFormat(url); //传输函数
         console.log(name1);
     </script>
 </body>
