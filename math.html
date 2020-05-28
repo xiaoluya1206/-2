@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学</title>
+</head>
+<body>
+    <script>
+        //Math.min(最小值)/max(最大值)/ceil(向上取整数)/floor(向下取整数)/round(四舍五入)/abs(绝对值)（index）
+
+        //random 语法：Math.random 0-1之间的随机数
+        //求n-m之间的随机整数公式：random=Math.floor(Math.random()*(m-n+1)+n)
+
+
+        //封装随机整数的例子
+        function getRandom(n,m){
+            var choise=m-n+1; //随机整数的个数
+            return Math.floor(Math.random()*choise+n); //+n 加上最小值2 Math.random为最小值0
+        }
+        var random1=getRandom(2,8);
+        console.log(random1); //结果为2-8之间的随机整数
+    </script>
+</body>
+</html>
