@@ -22,18 +22,29 @@
 
 
 
-        //小练习 将多个字母的首字母改为大写
-        function camelback(str){ //封装一个函数 接收
-            //通过-将str拆分为数组  arr[0]表示第一个单词
-            var arr=str.split("-"),newstr=arr[0]; 
-            for (var i=1,len=arr.length;i<len;i++){ //数组的遍历 从1开始 因为第一个单词不需要大写
-                 var word=arr[i];
-                 newstr+=word.charAt(0).toUpperCase()+word.substr(1); //将转换的首字母与后面的字母连接 +=表示每循环一次连接一次arr[0] 
-            }
-            return newstr;
+        // //小练习 将多个字母的首字母改为大写
+        // function camelback(str){ //封装一个函数 接收
+        //     //通过-将str拆分为数组  arr[0]表示第一个单词
+        //     var arr=str.split("-"),newstr=arr[0]; 
+        //     for (var i=1,len=arr.length;i<len;i++){ //数组的遍历 从1开始 因为第一个单词不需要大写
+        //          var word=arr[i];
+        //          newstr+=word.charAt(0).toUpperCase()+word.substr(1); //将转换的首字母与后面的字母连接 +=表示每循环一次连接一次arr[0] 
+        //     }
+        //     return newstr;
+        // }
+        // var newcamelback=camelback("border-left-color") //传输
+        // console.log(newcamelback);
+
+
+
+        //获取邮箱用户名和域名
+        var email=prompt("请输入您的邮箱");
+        var arr=email.split("@"),newstr=arr[0];
+        for (var i=0,len=arr.length;i<len;i++){
+            var wo=arr[i];
+            newstr="您的邮箱用户名为："+arr[0]+"<br/>"+"您的邮箱域名为："+arr[i]+"邮箱";
         }
-        var newcamelback=camelback("border-left-color") //传输
-        console.log(newcamelback);
+        document.write(newstr);
     </script>
 </body>
 </html>
