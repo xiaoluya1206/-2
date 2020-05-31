@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul id="lis1">
+        <li>前端开发</li>
+        <li>服务器端开发</li>
+        <li>UI设计</li>
+    </ul>
+    <ol id="lis3">
+        <li>javaScript原生</li>
+        <li>JavaScript框架</li>
+    </ol>
+    <script>
+        var lis=document.getElementsByTagName("li"); //获取所有的li标签
+        console.log(lis.length);  //打印li标签个数
+        //只选择lis1下的li
+        var lis2=document.getElementById("lis1").getElementsByTagName("li");
+        console.log(lis2.length);
+    </script>
+</body>
+</html>

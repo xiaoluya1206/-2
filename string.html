@@ -37,14 +37,33 @@
 
 
 
-        //获取邮箱用户名和域名
-        var email=prompt("请输入您的邮箱");
-        var arr=email.split("@"),newstr=arr[0];
-        for (var i=0,len=arr.length;i<len;i++){
-            var wo=arr[i];
-            newstr="您的邮箱用户名为："+arr[0]+"<br/>"+"您的邮箱域名为："+arr[i]+"邮箱";
+        // //练习一：获取邮箱用户名和域名
+        // var email=prompt("请输入您的邮箱");
+        // var arr=email.split("@"),newstr=arr[0];
+        // for (var i=0,len=arr.length;i<len;i++){
+        //     var wo=arr[i];
+        //     newstr="您的邮箱用户名为："+arr[0]+"<br/>"+"您的邮箱域名为："+arr[i]+"邮箱";
+        // }
+        // document.write(newstr);
+
+
+
+        // //练习二：获取当前月份getMonth/getFullYear(年)/Date(天)/Day(星期)/Hours(时)/Minutes(分)/Seconda(秒)/Time(毫秒) 设置用set
+        // var date=new Date();
+        // var month=date.getMonth()+1;
+        // console.log("现在是"+month+"月");
+
+
+        //练习三：通过输入框获取员工入职时间以及合同期（3年）到期时间
+        var year=prompt("请输入您的入职年份");
+        var month=prompt("请输入您的入职月份");
+        var date=prompt("请输入您的入职日");
+        var temp=new Date(year,month,date);
+        if(month==12){
+            document.write("您的入职时间为："+year+"-"+month+"-"+date+"<br />"+"合同到期时间为："+(temp.getFullYear()+2)+"-"+(temp.getMonth()+12)+"-"+temp.getDate());
+        }else{
+        document.write("您的入职时间为："+year+"-"+month+"-"+date+"<br />"+"合同到期时间为："+(temp.getFullYear()+3)+"-"+temp.getMonth()+"-"+temp.getDate());
         }
-        document.write(newstr);
     </script>
 </body>
 </html>

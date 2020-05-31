@@ -22,16 +22,33 @@
         //数组的排序：reverse
         //语法：数组名.reverse（）
 
-        //使用封装函数实现数组反转
-        var nums=[1,2,3,4,5];
-        function arrReverese(arr){
-            newnums=[];
-            for(var i=0;i<nums.length;i++){
-                return nums.reverse();
-            }
+
+
+        // //练习一：使用封装函数实现数组反转
+        // var nums=[1,2,3,4,5];
+        // function arrReverese(arr){
+        //     newnums=[];
+        //     for(var i=0;i<nums.length;i++){
+        //         return nums.reverse();
+        //     }
+        // }
+        // var newnums=nums.reverse(); 
+        // document.write(newnums);
+
+
+
+        //对1-100的随机十个数数进行降序 并且获取最大值最小值
+        var arr=[];
+        //封装函数 获取0-100中的随机数
+        function getarr(n,m){
+                var len=m-n+1 //随机数的个数
+                return Math.floor(Math.random()*len+n);
         }
-        var newnums=nums.reverse(); 
-        document.write(newnums);
+        for(var i=0;i<10;i++){
+            arr.push(getarr(0,100)); //把参数0-100中随机10(i<10)个数添加到arr里面 
+        }
+        arr.sort(function(a,b){return a<b});  //封装函数 实现0-100随机数的降序
+        document.write(arr+"<br />"+"这组数中最大值为:"+arr[0]+","+"最小值为:"+arr[9]);
     </script>
 </body>
 </html>
