@@ -22,8 +22,11 @@
     </ul>
     <script>
         var chinese=document.getElementsByTagName("li");
-        for(var i=0,len=chinese.length;i%2==0,i<len;i++){
-            
+        for(var i=0,len=chinese.length;i<len;i++){
+            chinese[i].innerHTML="第"+[i+1]+"名："+chinese[i].innerHTML;
+            if(i%2==0){
+            chinese[i].className="red";
+            }
         }
     </script>
 </body>
