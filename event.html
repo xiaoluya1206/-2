@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件</title>
+    <style>
+        .bt{width: 100px;height: 30px;line-height: 30px; background-color: blue;font-size: 15px;text-align: center;margin-top: 30px;border-radius: 5px;}/*border-radius 设置圆角矩形*/
+    </style>
+</head>
+<body>
+    <input type="button" value="弹 出" onclick="alert('我是按钮')"> <!--鼠标点击时发生的事件  button意为按钮-->
+    <div id="bt" class="bt" onmousemove="mousemoveFn(this)" onmouseout="mouseoutFn(this)">开始</div> <!--通过函数设置鼠标滑过事件（onmousemove）this可以直接引用DOM对象 传输  亦可直接在this里面传参 例onmousemove="mousemoveFn(this，'#f00')"-->
+    <script>
+        function mousemoveFn(bt){//接收 此处可为（bt，bgColor）接收的名可自取
+           bt.style.background="#f00"; //接在this传参 此处为=bgColor
+        }
+        function mouseoutFn(bt){
+            bt.style.background="blue";
+        }
+    </script>
+</body>
+</html>
