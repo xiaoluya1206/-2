@@ -35,7 +35,7 @@
         // document.write("今天星期"+weekstr);
 
 
-        var money=prompt("请输入您要查询的业务编号")
+        /* var money=prompt("请输入您要查询的业务编号")
         switch(money){
             case "1":
             money="您的账户余额为10000000"
@@ -49,7 +49,25 @@
             default:
             money="退出银行系统"
         }
-        document.write(money);
+        document.write(money); */
+        
+        //判断某一天是这一年的第几天
+        var year = 2020, month = 6, day = 20, num=0;
+        switch(month){
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                num += 31;
+            case "2":
+                year % 4 == 0 && year % 100 != 0 || year % 400 ==0 ? num += 29 : num += 28;
+            default:
+                num += 30;
+        }
+        document.write("输入的日期是 : " + year + "的第" + num + day + "天");
     </script>
 </body>
 </html>
