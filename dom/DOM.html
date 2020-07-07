@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .current{background: #ccc;color: #f00;}
+    </style>
+</head>
+<body>
+    <ul id="lis1">
+        <li>前端开发</li>
+        <li>服务器端开发</li>
+        <li>UI设计</li>
+    </ul>
+    <ol id="lis3">
+        <li>javaScript原生</li>
+        <li>JavaScript框架</li>
+    </ol>
+    <p id="text" data-type="title" align="center">文本</p>
+    <script>
+        // var lis=document.getElementsByTagName("li"); //获取所有的li标签
+        // console.log(lis.length);  //打印li标签个数
+        // //只选择lis1下的li
+        // var lis2=document.getElementById("lis1").getElementsByTagName("li");
+        // console.log(lis2.length);
+
+
+        // //设置lis1里面的li的颜色 因获取后得到的结果为数组 所以需要遍历每一个li得到DOM对象
+        // for(var i=0,len=lis2.length;i<len;i++){
+        //     lis2[i].style.color="red";
+
+        //     lis2[1].className="current"; //设置lis2的索引1为样式current 如li原有一个class标签 则替换元素本身的class
+
+        //     if(i==0){
+        //         lis2[i].style.backgroundColor="#ccc";
+        //     }else if(i==1){
+        //         lis2[i].style.backgroundColor="#999";
+        //     }else if(i==2){
+        //         lis2[i].style.backgroundColor="#666";
+        //     }else{
+        //         lis2[i].style.backgroundColor="#333"; //设置之后所有的i为这个颜色
+        //     }
+        // }
+
+
+        //获取DOM元素属性  语法：ele.getAttribute("attribute")
+        var p=document.getElementById("text");
+        console.log(p.align); //获取的一种方法 class属性除外 只可获取标准属性
+        console.log(p.getAttribute("data-type"));
+
+        //设置DOM属性 语法：ele.setAttribute("attribute(属性名)"，"value(属性值)")
+        p.setAttribute("data-color","red");
+
+        //删除DOM属性 语法：ele.removeAttribute("attribute")
+        p.removeAttribute("align");
+    </script>
+</body>
+</html>

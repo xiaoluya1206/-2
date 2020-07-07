@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom0级事件</title>
+    <style>
+        .bt{width: 100px;height: 30px;line-height: 30px; background-color: blue;font-size: 15px;text-align: center;margin-top: 30px;border-radius: 5px;}/*border-radius 设置圆角矩形*/
+         .bt1{width: 100px;height: 30px;line-height: 30px; background-color: #ccc;font-size: 15px;text-align: center;margin-top: 30px;border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="bt" id="bt">锁定</div>
+    <script>
+        //先获取Html元素
+        var bt=document.getElementById("bt");
+        //this是对该DOM元素的引用
+        bt.onclick=function(){//匿名函数
+            //点击按钮时会变成bt1的样式 并且显示解锁 点击解锁后显示bt 并显示锁定
+            if(this.className=="bt"){  //亦可用innerHtml==锁定
+                this.className="bt1";
+                this.innerHTML="解锁";
+            }else{
+                this.className="bt";
+                this.innerHTML="锁定";
+            }
+        }
+        //函数的调用 举例
+        function bt2(){
+            alert("我是一个函数")
+        }
+        bt2.onclick=bt2;//此处不可加括号 因为在没点击按钮的情况下就会实行 
+    </script>
+</body>
+</html>
