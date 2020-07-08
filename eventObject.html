@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      a{display: block; font-size: 25px; margin: 100px; width: 150px;}  
+      #msg{background-color: lightgrey; width: 200px; height: 180px; position: absolute; color: lightsalmon;}
+    </style>
     <script>
         //获取事件对象
-        obtn.onclck = function(ev){
+        /* obtn.onclck = function(ev){
             var e = ev || window.event; //ev 此方式在IE8以下不兼容 如果ev为假则实行 window.event
             alert(e)
-        }
+        } */
 
         /* 鼠标事件对象属性
         button属性 : 0 左键 /  1 滚轮 /  2 右键 */
@@ -19,9 +23,34 @@
         clientX,clientY  可视窗口为原点 
         pageX,pageY 整个页面的左上角(包含滚动距离)
         screenX,screenY  电脑屏幕左上角 */
+
+        //跟随鼠标实现提示框练习题
+        /* 提示：onmouseover 鼠标移入  
+            onmouseout    鼠标移出
+            onmousemove   跟随鼠标移动
+            clintX  , clintY */ 
+
+        var arr = ["刘露", "女", "20"]; 
+        window.onload = function(){
+            var as = document.getElementsByTagName("a");
+            var mSg = document.getElementById("mag");
+            for (var i = 0; i < as.length; i++){
+                as[i].index = i; //拿到a标签的对应下标 
+                as[i].onmouseover = function(){
+                    msg.style.display = "block"; //移入鼠标显示提示框
+                    as.innerHTML = arr[this.index];
+                }
+                as[i].onmouseout = function(){
+                    msg.style.display = "none"
+                }
+            }
+        }
     </script>
 </head>
 <body>
-    
+    <a href="#">小鹿的名字</a>
+    <a href="#">小鹿的性别</a>
+    <a href="#">小鹿的年龄</a>
+    <div id="msg"></div>
 </body>
 </html>
