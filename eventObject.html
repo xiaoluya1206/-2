@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-      a{display: block; font-size: 25px; margin: 100px; width: 150px;}  
-      #msg{background-color: lightgrey; width: 200px; height: 180px; position: absolute; color: lightsalmon;}
+      a{display: block; font-size: 25px; margin: 150px; width: 150px;}  
+      #msg{background-color: lightgrey; width: 200px; height: 180px; line-height: 180px; text-align: center; position: absolute; color: lightsalmon;display: none;}
     </style>
     <script>
         //获取事件对象
@@ -33,15 +33,20 @@
         var arr = ["刘露", "女", "20"]; 
         window.onload = function(){
             var as = document.getElementsByTagName("a");
-            var mSg = document.getElementById("mag");
+            var mSg = document.getElementById("msg");
             for (var i = 0; i < as.length; i++){
                 as[i].index = i; //拿到a标签的对应下标 
                 as[i].onmouseover = function(){
-                    msg.style.display = "block"; //移入鼠标显示提示框
-                    as.innerHTML = arr[this.index];
+                    mSg.style.display = "block"; //移入鼠标显示提示框
+                    mSg.innerHTML = arr[this.index];
                 }
                 as[i].onmouseout = function(){
-                    msg.style.display = "none"
+                    mSg.style.display = "none"
+                }
+                as[i].onmousemove = function(ev){
+                    var e = e || window.event
+                    mSg.style.left = e.clienyX + 10 + "px";
+                    mSg.style.top = e.clientY + 10 + "px";
                 }
             }
         }
