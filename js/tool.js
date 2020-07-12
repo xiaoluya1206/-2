@@ -14,3 +14,13 @@ function elementsByClassName(node,classStr){
     }
     return arr; 
 }
+
+//封装一个阻止事件冒泡的函数
+function stopBubble(e){
+    e.stopPropagation ? e.stopPropagation() : e.cancelBunnle = true;
+}
+
+//封装一个阻止超链接默认行为的函数
+function preDef(e){
+    e.preventDefault ? e.preventDefault() : window.event.returnValue = false; 
+}
