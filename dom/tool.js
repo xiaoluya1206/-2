@@ -14,3 +14,25 @@ function elementsByClassName(node,classStr){
     }
     return arr; 
 }
+
+//封装一个拖拽的函数
+function drag (node){
+    //记录鼠标按下的位置与被拖拽物体的相对距离  
+    node.onmousedown = function(ev){
+        var e = ev || window.event; //获取事件对象
+        //水平距离 = 当前鼠标位 - 拖拽物居左距离
+        var offsetX = e.clientX - node.offsetLeft;
+        var offsetY = e.clientY - node.offsetTop;
+
+        //鼠标移动一直保持相对距离
+        document.onmousemove = function (ev){
+            var e = ev || window.event
+            node.style.left = e.clientX - offsetX + "px";
+            node.style.top = e.clientY - offsetY + "px";
+        }
+    }
+    //取消拖拽
+    document.onmouseup = function(){
+        document.onmousemove = null;
+    }
+}

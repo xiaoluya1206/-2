@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "tool.js" ></script>
+    <style>
+        #div1{width: 200px; height: 300px; background-color: red;}
+    </style>
+    <script>
+        /* 属性节点的获取: 
+        elem.attributes.getNameditem("属性名");
+        elem.attributes["属性名"]; */
+
+
+                /* nodeType          nodeName         nodeValue
+    元素节点            1                  标签名             null
+    属性节点            2                  属性名              值
+    文本节点            3                  #text              内容 */
+
+
+    /* 创建节点:document.createElement()
+    某一节点放在子节点内:node1.appendChild(node2)    2放在1的末尾
+                       box1.parentNode(父节点).insertBefore(box2,box1);    2插在1之前
+    创建文本节点:document.createTextNode(文本);
+    替换节点:box1.parentNode.repalceChild(box2,box1);    2替换1
+    复制节点:1、node.cloneNode();    只复制一个节点 节点下的子节点不可复制
+            2、node.cloneNode(true);     复制节点以及节点下子节点
+    删除节点:box.parentNode.removeChild(box);    删除box此节点 */
+
+
+    var odiv = document.getElementById("div1");
+    drag(odiv);
+    </script>
+</head>
+<body>
+    <div id = "div1"></div>
+</body>
+</html>
