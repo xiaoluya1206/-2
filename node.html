@@ -30,8 +30,10 @@
     删除节点:box.parentNode.removeChild(box);    删除box此节点 */
 
 
-    var odiv = document.getElementById("div1");
-    drag(odiv);
+    window.onload = function(){
+        var node = document.getElementById("div1");
+        drag(node);
+    }
     </script>
 </head>
 <body>
