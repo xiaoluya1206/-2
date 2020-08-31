@@ -65,7 +65,6 @@ padding-bottom: 7px;
     background: #eaeaea;
 }
 .banner > ul {
-    position: relative;
     width: 1500px;
     height: 300px;
     margin: 0px auto;
@@ -78,6 +77,7 @@ padding-bottom: 7px;
 }
 .banner > ul > li.left > img {
     width: 500px;
+    margin-left: 100px;
 }
 .banner > ul > li.right > img {
     width: 500px;
@@ -109,6 +109,7 @@ padding-bottom: 7px;
 .main > aside {
     float: left;
     width: 600px;
+    margin-left: 20px;
 }
 .main > aside > dl {
     position: relative;
@@ -125,11 +126,11 @@ padding-bottom: 7px;
     line-height: 25px;
     text-decoration: underline;
 }
-.main > aside > dl > dd:first-of-type {
+.main > aside > dl > dd:first-of-type {/*第一个*/
     position: absolute;
     left: 0px;
 }
-.main > aside > dl > dd:last-of-type {
+.main > aside > dl > dd:last-of-type {/*最后一个*/
     position: absolute;
     top: 38px;
     left: 95px;
@@ -142,7 +143,7 @@ padding-bottom: 7px;
     width: 80px;
 }
 .main > article > img {
-    width: 950px;
+    width: 100%;
     height: 300px;
     margin-bottom: 10px;
 }
@@ -173,6 +174,7 @@ footer >.container > span > img {
     opacity: .7;
     color: #eaeaea;
 }
+/*设置指针移动至位置出现手指 hover位于什么上*/
 footer >.container > span > img:hover {
     opacity: 100;
     cursor: pointer;
