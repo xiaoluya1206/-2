@@ -38,12 +38,12 @@ function drag (node){
         //鼠标移动一直保持相对距离
         document.onmousemove = function (ev){
             var e = ev || window.event
-            node.style.marginLeft = e.clientX - offsetX + "px";
-            node.style.marginTop = e.clientY - offsetY + "px";
+            node.style.MarginLeft = e.clientX - offsetX + "px";
+            node.style.MarginTop = e.clientY - offsetY + "px";
         }
     }
     //取消拖拽
     document.onmouseup = function(){
         document.onmousemove = null;
-    } 
+    }
 }
