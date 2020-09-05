@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 350px;
+            height: 300px;
+            background-color: red;
+            text-align: center;
+            color: white;
+        }
+        div > h1{
+            font-size: 50px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        div > dl{
+            font-size: 20px;
+        }
+        div > span{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var timer;
+        function miaosha(year,month,day,hour,minute,second){
+            var leftTime = (new Date (year,month - 1,day,hour,minute,second))- (new Date());
+            var hours = parseInt(leftTime/1000/3600%24,10);//毫秒的形式所以需要除1000  10进制
+            var minutes = parseInt(leftTime/1000/60%60,10);
+            var seconds = parseInt(leftTime/1000%60,10);
+            if(seconds < 0){
+                alert("时间到了，快点！！！");
+                clearTimeout(timer);
+            }else{
+                timer = setTimeout("miaosha(2020,09,05,22,55,00)",1000);
+            document.getElementById("h").innerHTML = hours;
+            document.getElementById("m").innerHTML  = minutes;
+            document.getElementById("s").innerHTML  = second;
+            }
+        }
+    </script>
+    <div>
+        <h1>秒杀专场</h1>
+        <dl> <b>22：55</b> 倒计时</dl>
+        <span id="h">00</span>
+        <span>:</span>
+        <span id="m">00</span>
+        <span>:</span>
+        <span id="s">00</span>
+    </div>
+</body>
+</html>
