@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="miaosha();" >
     <script>
         var timer;
         function miaosha(year,month,day,hour,minute,second){
@@ -37,16 +37,16 @@
                 alert("时间到了，快点！！！");
                 clearTimeout(timer);
             }else{
-                timer = setTimeout("miaosha(2020,09,05,22,55,00)",1000);
+                timer = setTimeout("miaosha(2020,09,06,21,28,00)",1000);
             document.getElementById("h").innerHTML = hours;
             document.getElementById("m").innerHTML  = minutes;
-            document.getElementById("s").innerHTML  = second;
+            document.getElementById("s").innerHTML  = seconds;
             }
         }
     </script>
     <div>
         <h1>秒杀专场</h1>
-        <dl> <b>22：55</b> 倒计时</dl>
+        <dl id="shi"> <b>22：55</b> 倒计时</dl>
         <span id="h">00</span>
         <span>:</span>
         <span id="m">00</span>

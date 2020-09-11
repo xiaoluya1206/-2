@@ -163,7 +163,7 @@ header > .container > nav > a {
     margin-top: 150px;
     margin-bottom: 30px;
 }
-/*必须加display：flex 设置横轴方向的居中方式*/
+/*将块级元素改为容器 设置横轴方向的居中方式 垂直为：align-itens:flex-center*/
 .team > div {
     display: flex;
     justify-content: center;
