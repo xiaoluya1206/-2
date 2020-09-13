@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hed{
+            width: 1100px;
+            margin: 200px;
+        }
+        .tou img{
+            width: 200px;
+            height: 45px;
+            /* 设置边框弧度 */
+            border-radius: 21px;
+        }
+        input{
+            width: 400px;
+            height: 40px;
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 21px;
+        }
+        .tou,.kuang{
+            float: left;
+        }
+        .kuang{
+            margin-left: 110px;
+            position: relative;
+        }
+        .kuang img{
+            position: absolute;
+            height: 44px;
+            width: 44px;
+            top: 0;
+            right: 0;
+        }
+        .shou{
+            float: right; 
+        }
+        .shou img{
+            /* 垂直对齐方式：垂直对齐 */
+            vertical-align: middle;
+        }
+        ol{
+            /* 列表的样式 */
+            list-style: none;   
+        }
+        li{
+            float: left;
+            margin-left: 10px;
+        }
+        span{
+            color: gray;
+            margin-right: 20px;
+            margin: 0 10px;
+        }
+        a{
+            color: gray;
+            /* 文本修饰下划线 */
+            text-decoration: none;
+        }
+        a:hover{
+            color: blue;
+        }
+        .bt{
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+        }
+        .bt a{
+           margin-right: 20px; 
+           font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hed">
+        <div class="tou">
+            <img src="images/logo_1.png" >
+        </div>
+        <div class="kuang">
+            <input type="text" placeholder="请输入您要搜索的内容">
+            <a href="#">
+                <img src="images/sousuo.png" >
+            </a>
+        </div>
+        <div class="shou">
+            <ol>
+                <li>
+                    <a href="#">
+                        <img src="images/xin.png" >
+                    </a>
+                </li>
+                <li>
+                    <span>|</span>
+                    <a href="#">
+                        <img src="images/ding.png" >
+                    </a>
+                </li>
+                <li>
+                    <span>|</span>
+                    <a href="#">
+                        <img src="images/shop_car.png" >
+                    </a>
+                </li>
+                <li>
+                    <span>|</span>
+                    <a href="#">登录</a>
+                </li>
+                <li>
+                    <span>|</span>
+                    <a href="#">帮助</a>
+                </li>
+            </ol>
+        </div>
+        <div class="bt">
+            <a href="#">首页</a>
+            <a href="#">私人订制</a>
+        </div>
+    </div>
+</body>
+</html>
